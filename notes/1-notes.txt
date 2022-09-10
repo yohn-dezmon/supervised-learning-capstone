@@ -1,0 +1,15 @@
+First approach:
+- load up the dataset and create the predictive model
+- create any visualizations you find useful 
+- use any supervised learning model you prefer 
+
+Second approach:
+- use the notebook as a guide 
+- complete the tasks in the notebook
+- this one only uses predictive tree-based models (as opposed to SVMs or Logistic Regression)
+
+Third approach:
+- just follow along with the solutions videos.
+
+
+Let's try First Approach! This will be like doing a kaggle competiton.
