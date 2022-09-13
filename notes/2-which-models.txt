@@ -1,0 +1,10 @@
+which model for classification of uneven target labels?
+
+- without accounting for this, models will perform poorly for the minority class 
+- 
+
+class label = target.
+
+This is a Binary classification problem.
+
+Are there any outliers in the data? If there are... what do I do with them?
