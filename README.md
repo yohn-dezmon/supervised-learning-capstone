@@ -7,5 +7,5 @@ Sections:
 - Churn cohort analysis 
 - Predictive machine learning 
 
-Data: Telco-Customer-Churn.csv
+Data: Telco-Customer-Churn.csv  
 Notebook: predicting_customer_churn.ipynb
