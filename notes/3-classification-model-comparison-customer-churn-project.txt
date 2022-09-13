@@ -1,0 +1,97 @@
+Classification Models that I know:
+
+1. Logistic regression 
+2. Support Vector Machines 
+3. Boosted Decision Trees (Adaboost & Gradient Boost)
+4. Random Forests (decision trees)
+5. KNN 
+
+Do you have to use train test split for all of these?
+- my guess would be yes.
+
+For which of these do you have to scale your data?
+If you only scale your data for some, does that mess up the interpretation of the 
+metrics at the end (accuracy, confusion matrix, etc.?)
+
+
+When doing Logistic regression, do I need to do gridsearch?
+Yes!
+What does grid search do?
+- it tries to find the best values for hyperparameters.
+
+how to choose range for C values for logistic regression?
+
+
+Why is the accuracy_score unreliable?
+
+
+How do I interpret the classification_report from logistic regression?
+
+
+Precision Recall Curve vs. ROC curve?
+- precision is how good a model is at predicting a positive class (ours is bad)
+- recall is how good a model is at predicting a positive class when the result is 
+actually positive. 
+- ROC curves should be used when there are roughly equal observations from each class (not
+our dataset)
+- ** precision recall curves should be used when there is a moderate to large class 
+imblance YES.
+
+***
+Wait... what is the purpose of using the precision recall curve if I've already 
+run the model? 
+What can I change at this point?
+Idk I think it is just another way of showing you how good or bad your model is.
+If it's better, it will be closer to the edge of the graph.
+
+
+
+you should try many different algorithms for your problem, while using a hold-out 
+“test set” of data to evaluate performance and select the winner.
+^^ Ok so I should use the same thing in the train_test_split each time to ensure I always
+have the same hold out test data.
+
+
+
+
+
+
+What's the difference between Random Forest and boosted decision trees?
+
+With random forest, you're taking a subset of the available features, and making a 
+model where you have to select the root node from that subset of features. 
+You then decide how many subsets from the featureset you want to take. 
+n_estimators: how many trees you want to include in your ensemble.
+n_features: how many features to include in each tree.
+
+What is bootstrapping (with random forests):
+- bootstrapping is where you only use some of the rows?
+- yeah you only use some of the rows for each split decision
+- you do this to decrease correlation between sub-trees
+- it helps the model be more generalized (more robust)
+
+What is out of bag error?
+- it's when you use the rows that WEREN't used to train the subtree in order to 
+get their y_hat predicted values 
+- you then compare these against the true y values and get an out of bag error 
+for each subtree
+
+Boosted decision trees:
+- making an ensemble of really simple models (e.g. stumps with Adaboost)
+where you just have a single feature predicting output values. 
+- in adaboost each of the stumps gets assinged an alpha value which should 
+indicate how important the model is to the ensemble 
+- in Gradietn Boosting --> the learning rate for each simple model is the same.
+Instead of just stumps, you just have simplified trees (small trees).
+you start by training your first model, get predicted values, you then get the error
+for these predicted values... you then create a new model to predict the error 
+from the previous model... to get the graident boosted model you add your predicted values
+to the predicted error (residual) values.
+Then you make another simple model, 
+
+
+Is bootstrapping specific to Random Forests or is this a meta technique?
+
+Boosting is NOT specific to decision trees (it IS a meta technique)
+
+
