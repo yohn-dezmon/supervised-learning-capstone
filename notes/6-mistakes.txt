@@ -1,0 +1,6 @@
+6-mistakes
+
+
+I most likely should have chosen a larger range of values for the parameters I used.
+It would be good to rerun each model with a larger range of hyperparameters to 
+see if I can increase accuracy for each of the models.
