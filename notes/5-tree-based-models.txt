@@ -1,0 +1,41 @@
+5-tree-based-models
+
+How to decide between Random Forests vs. AdaBoost vs. Gradient Boost?
+
+- apparently random forests is better for problems with lots of statistical noise
+(multiclass object detection, bioinformatics)
+- otherwise it seems gradient boosting is expected to have better performance 
+- gradient boosting is more time consuming to train (I think).
+
+https://www.datasciencecentral.com/decision-tree-vs-random-forest-vs-boosted-trees-explained/#:~:text=If%20you%20carefully%20tune%20parameters,to%20tune%20than%20random%20forests.
+
+
+GradientBoostinClassifier vs. XGBoost?
+
+
+
+
+Random Forests:
+- you take subsets of features, but you create full decision trees
+- each time you're trying to predict y 
+
+AdaBoost:
+- you use stumps instead of full decision trees
+- you create weights each time you fit a given stump, and those weight coefficients 
+are used in the next time you fit another stump.
+- we weight points heavier if they misclassified the data 
+- we reduce weights for the ones it gets right
+- each new model fits itself to the newly weighted data...
+- in addition to the weights for individual data points, there is also a weighting 
+factor that is applied to each stump's result. This is called the "weighting factor"
+- the weights are determined by taking the output of stump for each data point,
+subtracting it from actual y value, and getting the error. 
+
+
+Gradient Boost:
+- this time you can have more complex individual trees again 
+- but you only calculate the y_pred to be y one the initial round,
+- from there all of the weak learners try to predict the error from the previous round
+- you keep adding the residuals together to get a more accurate y_pred
+
+
