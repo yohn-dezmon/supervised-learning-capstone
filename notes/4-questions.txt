@@ -1,0 +1,6 @@
+1. How can I tune logistic regression after seeing the results (classification report, 
+confusion matrix, accuracy, f1-score, etc.)?
+- I used gridsearch... so perhaps I could adjust the range I used for grid search?
+- otherwise I'm not currently sure.
+
+2. 
