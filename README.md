@@ -3,9 +3,8 @@
 In this project we explore the churn of an internet & telephone provider.
 
 Sections:
-- Exploratory Data Analysis (EDA)
-- Churn cohort analysis 
+- Exploratory Data Analysis (EDA) 
 - Predictive machine learning 
 
 Data: Telco-Customer-Churn.csv  
-Notebook: predicting_customer_churn.ipynb
+**Notebook**: predicting_customer_churn.ipynb
